@@ -17,7 +17,7 @@ namespace ReservationPerformanceTests.ReservationPerformanceTests
 
         public async Task Execute(IUserLoadTestHttpClient loadLoadTestHttpClient)
         {
-            var test = new ConfigurationV1(loadLoadTestHttpClient, _tenant, "AMC", "Wood Door v1")
+            var test = new ConfigurationV2(loadLoadTestHttpClient, _tenant, "AMC", "Wood Door v1")
                 .WithIntegrationParameter("CurrencyCode", "", "string")
                 .WithIntegrationParameter("ExchangeRate", "1", "number");
 
